@@ -1,0 +1,19 @@
+codai desktop (ro.codai.desktop)
+Copyright 2026 Dragos Catalin Vladulescu
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+"codai" and the codai logo are trademarks of Dragos Catalin Vladulescu. The
+Apache-2.0 licence does not grant permission to use them (section 6); forks
+must ship under a different identifier (`bundle.identifier`) and product name.
+
+This product bundles or links against third-party software, each under its
+own licence:
+
+- Tauri and the tauri-plugin-* crates and @tauri-apps/* packages
+  (Apache-2.0 OR MIT) — application shell, IPC, HTTP client, store, updater.
+- React, react-dom (MIT); Zustand (MIT); Vite and @vitejs/plugin-react (MIT);
+  Tailwind CSS (MIT); lucide-react (ISC); clsx (MIT); date-fns (MIT).
+- serde, serde_json, uuid, hostname (Apache-2.0 OR MIT) — Rust side.
+
+Icons in src-tauri/icons are placeholders pending the codai desktop artwork.

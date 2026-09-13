@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 🔒 Report a security problem
+    url: https://github.com/codai-ro/codai-desktop/blob/main/SECURITY.md
+    about: Please email security@codai.ro instead of opening a public issue.
+  - name: ❓ Questions and help
+    url: https://github.com/codai-ro/codai-desktop/blob/main/docs/faq.md
+    about: Check the FAQ first — many common questions are answered there.
+  - name: 📡 Protocol issues
+    url: https://github.com/codai-ro/codai-protocol/issues
+    about: Problems with the shared-sessions protocol itself belong in the protocol repo.
