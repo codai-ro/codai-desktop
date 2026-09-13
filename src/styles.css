@@ -1,0 +1,59 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+@import 'tailwindcss';
+
+/* Same tokens as the codai console (packages/ui/src/styles.css) so the
+   session screens render identically; copied because the desktop cannot
+   depend on private workspace packages. */
+@theme {
+  --color-brand-50: oklch(0.97 0.02 270);
+  --color-brand-100: oklch(0.93 0.05 270);
+  --color-brand-200: oklch(0.86 0.1 270);
+  --color-brand-300: oklch(0.78 0.15 270);
+  --color-brand-400: oklch(0.69 0.18 270);
+  --color-brand-500: oklch(0.62 0.22 270);
+  --color-brand-600: oklch(0.55 0.21 270);
+  --color-brand-700: oklch(0.46 0.18 270);
+  --color-brand-800: oklch(0.36 0.14 270);
+  --color-brand-900: oklch(0.26 0.1 270);
+
+  --color-bg: light-dark(oklch(0.985 0.003 270), oklch(0.13 0.01 270));
+  --color-bg-elevated: light-dark(oklch(1 0 0), oklch(0.17 0.012 270));
+  --color-bg-panel: light-dark(oklch(0.97 0.004 270), oklch(0.2 0.015 270));
+  --color-border: light-dark(oklch(0.87 0.008 270 / 0.8), oklch(0.3 0.015 270 / 0.5));
+  --color-border-strong: light-dark(oklch(0.78 0.012 270 / 0.9), oklch(0.4 0.02 270 / 0.7));
+  --color-foreground: light-dark(oklch(0.2 0.015 270), oklch(0.96 0.005 270));
+  --color-muted: light-dark(oklch(0.45 0.015 270), oklch(0.65 0.015 270));
+  --color-muted-2: light-dark(oklch(0.6 0.012 270), oklch(0.45 0.015 270));
+  --color-danger: light-dark(oklch(0.55 0.2 25), oklch(0.65 0.2 25));
+  --color-success: light-dark(oklch(0.55 0.15 150), oklch(0.7 0.16 150));
+
+  --font-sans: ui-sans-serif, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+html.light {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  user-select: text;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-400);
+  outline-offset: 2px;
+}

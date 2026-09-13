@@ -1,0 +1,13 @@
+# Generated and build artefacts.
+target/
+gen/schemas/
+WixTools/
+
+# Bundle output.
+*.app
+*.dmg
+*.msi
+*.exe
+*.AppImage
+*.deb
+*.rpm

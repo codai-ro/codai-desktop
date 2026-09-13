@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-browser-type"
+description = "Enables the browser_type command without any pre-configured scope."
+commands.allow = ["browser_type"]
+
+[[permission]]
+identifier = "deny-browser-type"
+description = "Denies the browser_type command without any pre-configured scope."
+commands.deny = ["browser_type"]

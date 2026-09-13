@@ -1,0 +1,68 @@
+name: 🐛 Something's not working
+description: Tell us what went wrong. No need to be technical — plain words are perfect.
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time! A few details help us fix it quickly.
+        **Please remove anything private** (API keys, file paths you'd rather not share, session content) before posting.
+        Security problems: please **don't** file them here — email security@codai.ro instead (see SECURITY.md).
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what did the app do instead of what you expected?
+      placeholder: "I clicked Run here, typed a request, and the ask card never appeared…"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we see it too?
+      description: Step by step, if you can.
+      placeholder: |
+        1. Open a session I own
+        2. Click "Run here"
+        3. Type "…" and press Ctrl+Enter
+        4. …
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: Shown in the sidebar footer of the app.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows 11
+        - Windows 10
+        - macOS (built from source)
+        - Linux (built from source)
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Which mode were you in?
+      options:
+        - Run here (LOCAL — this computer was executing)
+        - Watching (REMOTE — another device was executing)
+        - Not in a session (onboarding, settings, devices…)
+        - Not sure
+  - type: textarea
+    id: error
+    attributes:
+      label: Any error message?
+      description: Copy it exactly if the app or the gateway showed one.
+      render: text
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots (redacted), whether you use a self-hosted gateway, whether it used to work…

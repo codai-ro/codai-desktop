@@ -1,0 +1,11 @@
+# Automatically generated - DO NOT EDIT!
+
+[[permission]]
+identifier = "allow-fs-roots"
+description = "Enables the fs_roots command without any pre-configured scope."
+commands.allow = ["fs_roots"]
+
+[[permission]]
+identifier = "deny-fs-roots"
+description = "Denies the fs_roots command without any pre-configured scope."
+commands.deny = ["fs_roots"]

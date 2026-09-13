@@ -1,0 +1,5 @@
+# Vite build output.
+dist/
+node_modules/.tmp/
+
+# Tauri artefacts are handled in src-tauri/.gitignore.

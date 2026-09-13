@@ -1,0 +1,42 @@
+name: 💡 I have an idea
+description: Suggest something codai desktop should do, or do better.
+title: "[idea] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We love ideas. Have a quick look at the [roadmap in the README](../blob/main/README.md#roadmap) and existing issues first — if it's already there, a 👍 on that issue helps more than a duplicate.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The situation, in your own words. What's annoying or missing today?
+      placeholder: "When I'm watching a session from my phone, I'd like to…"
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to happen?
+      description: Describe the ideal behaviour. Sketches, mock-ups and example prompts are welcome.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the app?
+      multiple: true
+      options:
+        - Running tasks on this computer (shell / files / browser)
+        - Permissions and ask cards
+        - Watching or steering sessions on other devices
+        - Sessions list and sharing
+        - Settings
+        - Installer / updates
+        - Something else
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Anything you tried instead?
+      description: Workarounds, other tools, or why they didn't fit.

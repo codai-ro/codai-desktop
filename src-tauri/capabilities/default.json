@@ -1,0 +1,47 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "codai desktop — main window. HTTP is scoped to the codai gateway origin only. Executor tool commands are opt-in (build.rs AppManifest::commands) and allow-listed here one by one.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "core:window:allow-show",
+    "core:window:allow-set-focus",
+    "core:window:allow-set-title",
+    "core:window:allow-minimize",
+    "core:window:allow-close",
+    "core:event:allow-emit",
+    "core:event:allow-listen",
+    "core:event:allow-unlisten",
+    "shell:allow-open",
+    "opener:default",
+    "notification:default",
+    "dialog:default",
+    "process:default",
+    "window-state:default",
+    "updater:default",
+    "fs:default",
+    "store:default",
+    "allow-shell-run",
+    "allow-fs-read",
+    "allow-fs-write",
+    "allow-fs-list",
+    "allow-fs-roots",
+    "allow-browser-launch",
+    "allow-browser-detect",
+    "allow-browser-eval",
+    "allow-browser-navigate",
+    "allow-browser-snapshot",
+    "allow-browser-click",
+    "allow-browser-type",
+    {
+      "identifier": "http:default",
+      "allow": [
+        { "url": "https://ai.codai.ro/*" },
+        { "url": "https://*.codai.ro/*" },
+        { "url": "http://localhost:*/*" },
+        { "url": "http://127.0.0.1:*/*" }
+      ]
+    }
+  ]
+}

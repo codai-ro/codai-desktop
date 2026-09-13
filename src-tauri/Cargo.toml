@@ -1,0 +1,44 @@
+[package]
+name = "codai-desktop"
+version = "0.1.0"
+description = "codai desktop — shared-sessions viewer and collaborator"
+authors = ["Dragos Catalin Vladulescu"]
+license = "Apache-2.0"
+edition = "2021"
+rust-version = "1.77.2"
+
+[lib]
+name = "codai_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.3", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tauri = { version = "2.11.5", features = [] }
+tauri-plugin-shell = "2.3.6"
+tauri-plugin-fs = "2.5.2"
+tauri-plugin-http = "2.6.0"
+tauri-plugin-store = "2.4.4"
+tauri-plugin-notification = "2.4.0"
+tauri-plugin-dialog = "2.7.3"
+tauri-plugin-opener = "2.5.5"
+tauri-plugin-process = "2.3.1"
+uuid = { version = "1", features = ["v4"] }
+hostname = "0.4.2"
+# Executor slice: CDP over a raw WebSocket (ws://127.0.0.1 only, no TLS) and
+# canonical paths without the `\\?\` prefix for the fs root check.
+tungstenite = { version = "0.30", default-features = false, features = ["handshake"] }
+dunce = "1"
+
+# Desktop-only plugins (no mobile targets).
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-single-instance = "2.4.4"
+tauri-plugin-window-state = "2.4.1"
+tauri-plugin-updater = "2.11.0"
+
+[features]
+default = []
+custom-protocol = ["tauri/custom-protocol"]
